@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { SecurityComponent } from './pages/security/security.component';
+import { CategoriasComponent } from './pages/categorias/categorias.component';
 
 const routes: Routes = [
   {
     path: '',
     children: [
-      { path: '', component: SecurityComponent },
+      { path: '', component: CategoriasComponent },
       { path: '**', redirectTo: ''}
     ]
   }

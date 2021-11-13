@@ -2,16 +2,22 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { InformacionRoutingModule } from './informacion-routing.module';
-import { SecurityComponent } from './pages/security/security.component';
+import { CategoriasComponent } from './pages/categorias/categorias.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { CategoriaComponent } from './components/categoria/categoria.component';
+import { TarjetaCategoriaComponent } from './components/tarjeta-categoria/tarjeta-categoria.component';
 
 
 @NgModule({
   declarations: [
-    SecurityComponent
+    CategoriasComponent,
+    CategoriaComponent,
+    TarjetaCategoriaComponent
   ],
   imports: [
     CommonModule,
-    InformacionRoutingModule
+    InformacionRoutingModule,
+    FontAwesomeModule
   ]
 })
 export class InformacionModule { }

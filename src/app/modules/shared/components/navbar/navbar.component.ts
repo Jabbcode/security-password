@@ -10,10 +10,7 @@ export class NavbarComponent implements OnInit {
 
   faUnlockAlt = faUnlockAlt;
 
-  menu: {} =  {
-    name: 'home',
-    route: '/'
-  }
+  home: string = '/security/informacion'
 
   constructor() { }
 

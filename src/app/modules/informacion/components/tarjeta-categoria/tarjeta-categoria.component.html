@@ -1,1 +1,12 @@
-<p>tarjeta-categoria works!</p>
+<div class="relative bg-white rounded border m-3" style="user-select: none;">
+    <div class="p-4 ">
+        <div class="flex justify-between">
+            <p class="block mb-2 text-sm text-gray-600">{{ informacion.titulo }}</p>
+            <fa-icon class="text-green-500 cursor-pointer" *ngIf="!toggle_show" [icon]="faEye" (click)="toggle()"></fa-icon>
+            <fa-icon class="text-green-500 cursor-pointer" *ngIf="toggle_show" [icon]="faEyeSlash" (click)="toggle()"></fa-icon>
+        </div>
+        <p *ngIf="informacion.correo" >{{ informacion.correo }} </p>
+        <p *ngIf="toggle_show" >{{ informacion.password }}</p>
+        <p *ngIf="!toggle_show">************</p>
+    </div>
+</div>

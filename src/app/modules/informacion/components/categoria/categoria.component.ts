@@ -1,4 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
+import { faShareAlt, faUniversity, faAt, faPlusCircle, faPlus, faPlusSquare } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-categoria',
@@ -7,8 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoriaComponent implements OnInit {
 
-  constructor() { }
+  @Input() datos: any = []; 
 
+  faShareAlt = faShareAlt;
+  faUniversity = faUniversity;
+  faAt = faAt;
+  faPlusCircle = faPlusCircle;
+  faPlus = faPlus;
+  faPlusSquare = faPlusSquare;
+
+  constructor() { }
+  
   ngOnInit(): void {
   }
 

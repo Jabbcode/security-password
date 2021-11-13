@@ -1,59 +1,11 @@
-<div class="container mx-auto my-10">
-    <h1 class="text-xl lg:text-3xl font-bold">
+<div class="container mx-auto my-10 ">
+    <h1 class="text-xl lg:text-3xl font-bold text-center md:text-left">
         <fa-icon class="text-green-500" [icon]="faSitemap"></fa-icon> Categorias
     </h1>
-    <!-- component -->
-<div class="container mx-auto p-8">
-    <div class="flex flex-row flex-wrap -mx-2">       
-      <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
-        <h3 class="text-xl mb-2 pl-1 font-bold">
-            <a class="stretched-link" href="#" title="Card 1">
-              Bancos
-            </a>
-          </h3>
-        <div class="relative bg-white rounded border">
-          <div class="p-4">
-            
-            <time class="block mb-2 text-sm text-gray-600" datetime="2019-01-01">1st January 2019</time>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-      </div>
-                      
-      <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
-        <h3 class="text-xl mb-2 pl-1 font-bold">
-            <a class="stretched-link" href="#" title="Card 2">
-              Redes sociales
-            </a>
-          </h3>
-        <div class="relative bg-white rounded border">
-          <div class="p-4">
-            
-            <time class="block mb-2 text-sm text-gray-600" datetime="2019-01-01">1st January 2019</time>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-      </div>
-                      
-      <div class="w-full sm:w-1/2 md:w-1/3 mb-4 px-2">
-        <h3 class="text-xl mb-2 pl-1 font-bold">
-            <a class="stretched-link" href="#" title="Card 3">
-              Correos electronicos
-            </a>
-          </h3>
-        <div class="relative bg-white rounded border">
-          <div class="p-4">
-            <time class="block mb-2 text-sm text-gray-600" datetime="2019-01-01">1st January 2019</time>
-            <p>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-            </p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
+<div class="container mx-auto flex flex-wrap justify-center lg:justify-around xl:justify-between">
+    <div *ngFor="let data of datos" class="w-11/12 md:w-2/4 lg:w-2/4 xl:w-96">
+        <app-categoria [datos]="data"></app-categoria>
+    </div>
+</div>
+<!-- {{ datos | json }} -->
